@@ -8,9 +8,12 @@
        <div class="card">
      <div >
     
-    <a href="{% url 'detail' article.id   %}">
-      <img class="card-img-top" src="{{article.image.url}}"style="height: 150px;" />
-    </a>
+  
+    <a href="{% url 'detail' article.id %}">
+      {% if article.image %}
+          <img class="card-img-top" src="{{ article.image.url }}" style="height: 150px;" />
+      {% endif %}
+  </a>
   </div>
   <div class="card-body" style="height: 240px;">
     <h5 class="card-title">   <a href="{% url 'detail' article.id   %}"> {{article.title}}</a></h5>

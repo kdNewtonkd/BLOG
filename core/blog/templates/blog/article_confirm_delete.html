@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="post">
+{%csrf_token%}
+<p>voulez-vous supprimer cet article? ({{object}})</p>
+<input type="submit" value="supprimer" class="btn btn-danger">
+<a href="" class="btn btn-secondary">non</a>
+</form>
+
+
+{%endblock%}

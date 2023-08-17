@@ -11,7 +11,7 @@ class Category(models.Model):
 
 class Article(models.Model):
 	user=models.ForeignKey(User,on_delete=models.CASCADE,null=True)
-	title=models.CharField(max_length=50)
+	title=models.CharField(max_length=100)
 	category=models.ForeignKey(Category,on_delete=models.CASCADE)
 	desc=models.TextField()
 	image=models.ImageField(null=True,blank=True)
